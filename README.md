@@ -17,6 +17,14 @@ Introduction to Nest
 $ pnpm install
 ```
 
+## Car dealership
+
+Populate Database
+
+```bash
+http://localhost:4321/seed
+```
+
 ## Running the app
 
 ```bash

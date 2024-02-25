@@ -6,13 +6,7 @@ import { v4 as uuid } from 'uuid';
 
 @Injectable()
 export class BrandsService {
-  private brands: Brand[] = [
-    {
-      id: uuid(),
-      createdAt: new Date().getTime(),
-      name: 'Toyota',
-    },
-  ];
+  private brands: Brand[] = [];
 
   create(createBrandDto: CreateBrandDto) {
     const { name } = createBrandDto;
@@ -62,5 +56,9 @@ export class BrandsService {
 
     this.brands = this.brands.filter((brand) => brand.id !== id);
     return `The brand ${brandDB.name} was deleted succesfully`;
+  }
+
+  fillBrandsWithSeedData(brands: Brand[]) {
+    this.brands = brands;
   }
 }
