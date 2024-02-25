@@ -71,7 +71,6 @@ export class CarsService {
     }
 
     this.cars = this.cars.map((car) => {
-      console.log(car.id === id);
       if (car.id === id) {
         carDb = {
           ...carDb,
